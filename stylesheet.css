@@ -193,4 +193,17 @@ color: #858585;
 align-self: center;
 }
 
+.InfoInfos {
+margin: 10px;
+}
+
+.InfoContainFlex {
+display: flex;
+justify-content: center;
+}
+
+.InfoSubImg {
+width: 200px;
+height: 200px;
+}
 
