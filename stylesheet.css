@@ -1,3 +1,9 @@
+* {
+padding: 0;
+margin: 0;
+font-family: Arial, sans-serif;
+}
+
 
 body {
 background-color: white;
@@ -9,10 +15,12 @@ color: white;
 
 .box {
 background-color: black;
+color: white;
 align-self: center;
 margin-right: 200px;
 margin-left: 200px;
 margin-top: 65px;
+box-shadow: 0px 0px 100px black;
 }
 
 header {
@@ -21,9 +29,8 @@ position: fixed;
 top: 0;
 right: 0;
 left: 0;
-padding-left: 20px;
-height: 65px;
-font-size: 20px;
+padding: 20px;
+font-size: 30px;
 z-index: 999999;
 }
 
@@ -32,11 +39,29 @@ width: 100%;
 height: 600px
 }
 
+@keyframes BannerIconText {
+	0% {
+	transform: translate(0, 0);
+	}
+
+	50% {
+	transform: translate(0, -10%);
+	}
+
+	100% {
+	transform: translate(0, 0%);
+	}
+
+}
+
 .BannerText {
 position: absolute;
-top: 30%;
-left: 40%;
-font-size: 30px;
+top: 35%;
+left: 43%;
+font-size: 40px;
+animation-name: BannerIconText;
+animation-duration: 1s;
+animation-iteration-count: infinite;
 }
 
 .banner {
@@ -47,17 +72,36 @@ marquee {
 border-top: solid white 5px;
 border-bottom: solid white 5px;
 color: black;
+padding: 10px 0px 10px 0px;
+}
+
+@keyframes BannerIconImg {
+	0% {
+	transform: translate(0, 0);
+	}
+
+	50% {
+	transform: translate(0, -5%);
+	}
+
+	100% {
+	transform: translate(0, 0%);
+	}
+
 }
 
 .BannerIcon {
 position: absolute;
 border-radius: 100%;
 overflow: hidden;
-width: 70px;
-height: 70px;
+width: 100px;
+height: 100px;
 top: 30%;
-left: 34%;
+left: 32%;
 border: solid 5px white;
+animation-name: BannerIconImg;
+animation-duration: 1s;
+animation-iteration-count: infinite;
 }
 
 .BannerIconImg {
@@ -74,16 +118,24 @@ margin-top: 35px;
 }
 
 .MenuItem {
+display: block;
 text-align: center;
-padding-top: 10px;
-padding-bottom: 10px;
 border-top: 5px solid white;
+padding-bottom: 10px;
+padding-top: 10px;
+transition: 0.3s all;
+}
+
+.MenuItem:hover {
+background-color: white;
+color: black;
 }
 
 .MenuTop {
 text-align: center;
-padding-top: 2px;
-padding-bottom: 2px;
+padding-top: 15px;
+padding-bottom: 15px;
+font-size: 20px;
 }
 
 a {
@@ -92,10 +144,53 @@ color: white;
 }
 
 .MenuVid {
-border-raidus: 15px;
+border-radius: 15px;
 height: 240px;
-width: 320px;
+width: 310px;
+margin: 10px;
+margin-left: 15px;
+border: white solid 5px;
+}
+
+.subbox {
+display: flex;
+}
+
+.InfoBox {
+text-align: center;
+
+width: 100%;
+height: 100%;
+float: right;
+}
+
+.InfoTitle{
+font-size: 50px;
+}
+
+.InfoImg {
+border: white solid 5px;
+border-radius: 15px;
+width: 640px;
+height: 390px;
+margin-bottom: 10px;
+}
 
 
+footer {
+background-color: black;
+position: relative;
+bottom: 0;
+right: 0;
+left: 0;
+padding: 20px;
+margin-top: 60px;
+text-align: center;
+}
+
+.FooterText {
+color: #858585;
+align-self: center;
+}
 
 
